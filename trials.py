@@ -74,14 +74,17 @@ def longestWordLength(words):
 
 def truncate(string):
     result = []
+    finalstring =''
 
     for index, char in enumerate(string): 
         if index != 0:
-            if char[index] != char[index-1]:
+            if string[index] != string[index-1]:
                 result.append(char)
+        else:
+            result.append(char)
 
 
-    return result.join()
+    return finalstring.join(result)
 
 print(truncate('mississippi'))
 # def has_balanced_parens(string):
